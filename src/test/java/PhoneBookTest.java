@@ -6,7 +6,7 @@ public class PhoneBookTest {
     @Test
     void add() {
         PhoneBook phoneBook = new PhoneBook();
-        assertNotEquals(phoneBook.add(), 0);
+        assertNotEquals(phoneBook.add("TEST", "TEST"), 0);
     }
 
 

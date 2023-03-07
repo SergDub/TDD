@@ -1,7 +1,12 @@
-public class PhoneBook {
+import java.util.Map;
+import java.util.TreeMap;
 
-    public static int add(){
-        return 0;
+public class PhoneBook {
+    static Map<String, String> phoneBook = new TreeMap<>();
+
+    public static int add(String name, String number) {
+        phoneBook.put(name, number);
+        return phoneBook.size();
     }
 
 }
