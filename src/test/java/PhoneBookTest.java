@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class PhoneBookTest {
 
-    private final String testName = "Petr";
+    private final String testName = "Dima";
     private final String testNumber = "+7-800-000-00-00";
     PhoneBook phoneBook = new PhoneBook();
 
@@ -17,8 +17,17 @@ public class PhoneBookTest {
     @Test
     void findByNumberTest() {
         phoneBook.add(testName, testNumber);
-        String expected = "Petr";
+        String expected = "Dima";
         String actual = phoneBook.findByNumber(testNumber);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void findByNameTest() {
+        phoneBook.add(testName, testNumber);
+        String expected = "+7-800-000-00-00";
+        String actual = phoneBook.findByName(testName);
 
         assertEquals(expected, actual);
     }

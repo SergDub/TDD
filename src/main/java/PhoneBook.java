@@ -21,4 +21,11 @@ public class PhoneBook {
         }
         return name;
     }
+
+    public static String findByName(String name) {
+        String number = null;
+        number = phoneBook.get(name);
+        if (number == null) number = "Контакт отсутствует";
+        return number;
+    }
 }
