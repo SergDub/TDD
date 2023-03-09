@@ -1,7 +1,4 @@
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
+import java.util.*;
 
 public class PhoneBook {
     static Map<String, String> phoneBook = new TreeMap<>();
@@ -31,6 +28,7 @@ public class PhoneBook {
     }
 
     public static List<String> printAllNames() {
-        return null;
+
+        return new ArrayList<>(phoneBook.keySet());
     }
 }

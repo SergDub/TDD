@@ -48,7 +48,5 @@ public class PhoneBookTest {
         List<String> expected = List.of("Dima", "Masha", "Vova");
         List<String> actual = phoneBook.printAllNames();
         assertEquals(expected, actual);
-
-        //verify(publishing,times(1)).publishInformation(person);
     }
 }
