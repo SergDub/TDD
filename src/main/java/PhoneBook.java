@@ -26,6 +26,6 @@ public class PhoneBook {
         String number = null;
         number = phoneBook.get(name);
         if (number == null) number = "Контакт отсутствует";
-        return number;
+        return umber;
     }
 }
