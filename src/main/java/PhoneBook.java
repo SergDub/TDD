@@ -1,4 +1,5 @@
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
 
 public class PhoneBook {
@@ -10,6 +11,14 @@ public class PhoneBook {
     }
 
     public static String findByNumber(String number) {
-        return null;
+        Set<Map.Entry<String, String>> entrySet = phoneBook.entrySet();
+        String name = "Номер отсутствует";
+        for (Map.Entry<String, String> entry :phoneBook.entrySet()) {
+
+            if (entry.getValue().equals(number)) {
+                name = entry.getKey();
+            }
+        }
+        return name;
     }
 }
